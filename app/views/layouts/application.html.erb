@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render "layouts/partials/header" %>
-	<%= yield %>
-	<%= render "layouts/partials/footer" %>
+	<%= render "layouts/partials/navigation" %>
+	<header>
+		<%= render "layouts/partials/header" %>
+	</header>
+	<div id="container">
+		<%= yield %>
+	</div>
+	<footer>
+		<%= render "layouts/partials/footer" %>
+	</footer>
 </body>
 </html>
