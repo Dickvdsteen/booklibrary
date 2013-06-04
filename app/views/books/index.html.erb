@@ -1,10 +1,6 @@
 <div class="page-header">
 	<h1>My Books</h1>
 </div>
-<div id="gallery">
-  <ul id="grid">
-    <% @books.each do |book| %>
-     <li><%= link_to image_tag(book.image_link), book %></li>
-    <% end %>
-  </ul>
+<div id="gallery_container">
+	<%= render "books/partials/gallery"%>
 </div>

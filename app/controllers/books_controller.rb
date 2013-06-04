@@ -2,9 +2,10 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = Book.paginate(:page => params[:page])
 
     respond_to do |format|
+	  format.js
       format.html # index.html.erb
       format.json { render json: @books }
     end
